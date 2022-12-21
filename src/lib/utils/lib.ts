@@ -1,12 +1,13 @@
 import { Provider } from '@ethersproject/abstract-provider'
 import { TransactionReceipt } from '@ethersproject/providers'
+import { BigNumber } from '@ethersproject/utils'
 import { ArbSdkError } from '../dataEntities/errors'
 
 export const wait = (ms: number): Promise<void> =>
   new Promise(res => setTimeout(res, ms))
 
 export const getBaseFee = async (provider: Provider) => {
-  return 500000000
+  return BigNumber.from(500000000)
   // const baseFee = (await provider.getBlock('latest')).baseFeePerGas
   // if (!baseFee) {
   //   throw new ArbSdkError(
