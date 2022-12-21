@@ -1,6 +1,6 @@
 import { Provider } from '@ethersproject/abstract-provider'
 import { TransactionReceipt } from '@ethersproject/providers'
-import { BigNumber } from '@ethersproject/utils'
+import { BigNumber } from '@ethersproject/bignumber'
 import { ArbSdkError } from '../dataEntities/errors'
 
 export const wait = (ms: number): Promise<void> =>
